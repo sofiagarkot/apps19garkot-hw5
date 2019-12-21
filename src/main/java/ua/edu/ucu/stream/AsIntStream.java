@@ -67,7 +67,7 @@ public class AsIntStream implements IntStream {
     @Override
     public IntStream filter(IntPredicate predicate) {
         ArrayList<Integer> result = new ArrayList<>();
-        for (Integer o : arrayList) {
+        for (int o : arrayList) {
             if (predicate.test(o)) {
                 result.add(o);
             }
@@ -77,7 +77,7 @@ public class AsIntStream implements IntStream {
 
     @Override
     public void forEach(IntConsumer action) {
-        for (Integer o : arrayList) {
+        for (int o : arrayList) {
             action.accept(o);
         }
     }
@@ -85,7 +85,7 @@ public class AsIntStream implements IntStream {
     @Override
     public IntStream map(IntUnaryOperator mapper) {
         ArrayList<Integer> result = new ArrayList<Integer>();
-        for (Integer o : arrayList) {
+        for (int o : arrayList) {
             int newO = mapper.apply(o);
             result.add(newO);
         }
