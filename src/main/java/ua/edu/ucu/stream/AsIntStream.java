@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class AsIntStream implements IntStream {
-    private static ArrayList<Integer> arrayList;
+    private ArrayList<Integer> arrayList;
     private static AsIntStream instance;
 
     private AsIntStream(ArrayList<Integer> values) {
@@ -28,8 +28,7 @@ public class AsIntStream implements IntStream {
         if (arrayList.size() == 0) {
             throw new IllegalArgumentException();
         }
-        double res = instance.sum() / arrayList.size();
-        return res;
+        return ((double) instance.sum() / arrayList.size());
     }
 
     @Override
