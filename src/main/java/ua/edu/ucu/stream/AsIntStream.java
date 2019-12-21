@@ -28,7 +28,7 @@ public class AsIntStream implements IntStream {
         if (arrayList.size() == 0) {
             throw new IllegalArgumentException();
         }
-        return ((double) instance.sum() / arrayList.size());
+        return (double) instance.sum() / arrayList.size();
     }
 
     @Override
