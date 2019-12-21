@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class AsIntStream implements IntStream {
-    private ArrayList<Integer> arrayList;
     private static AsIntStream instance;
+    private ArrayList<Integer> arrayList;
 
     private AsIntStream(ArrayList<Integer> values) {
         arrayList = new ArrayList<>();
